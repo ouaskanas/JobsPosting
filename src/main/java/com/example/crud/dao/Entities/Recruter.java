@@ -18,6 +18,7 @@ public class Recruter {
     private String recruter_Name;
     private String Company;
     private String recruter_Email;
+    private String recruter_Password;
     private String recruter_Number;
     @OneToMany()
     private List<Jobs> jobsList;

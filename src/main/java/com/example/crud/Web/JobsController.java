@@ -37,5 +37,4 @@ public class JobsController {
     public Jobs getJobById(@PathVariable int id){
         return jobsManager.getJobById(id);
     }
-
 }
