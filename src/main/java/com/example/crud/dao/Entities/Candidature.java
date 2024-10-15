@@ -11,15 +11,9 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Recruter {
+public class Candidature {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long recruter_ID;
-    private String recruter_Name;
-    private String Company;
-    private String recruter_Email;
-    private String recruterPassword;
-    private String recruter_Number;
-    @OneToMany()
-    private List<Jobs> jobsList;
+    private long Candidatureid;
+
 }

@@ -20,6 +20,6 @@ public class Candidate {
     private String CandidateEmail;
     private String CandidatePhone;
     private String CV_url;
-    private String Candidate_Password;
+    private String candidatePassword;
     private String Img_Url;
 }

@@ -17,6 +17,7 @@ public class Admin {
     private long IdAdmin;
     private String Name;
     private String imgUrl;
+    private String adminPassword;
     @OneToMany()
     private List<Jobs> jobsList;
 }

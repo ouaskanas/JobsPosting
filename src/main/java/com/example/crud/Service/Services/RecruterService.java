@@ -4,6 +4,7 @@ import com.example.crud.Service.managers.RecruterManager;
 import com.example.crud.dao.Entities.Recruter;
 import com.example.crud.dao.Repositories.RecruterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,14 @@ public class RecruterService implements RecruterManager {
     @Autowired
     private RecruterRepository recruterRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    private void EncodePassword(Recruter recruter){
+        String password = recruter.getRecruter_Password();
+        String encodedPassword = passwordEncoder.encode(password);
+        recruter.setRecruter_Password(encodedPassword);
+    }
     @Override
     public Recruter createRecruter(Recruter recruter) {
         return recruterRepository.save(recruter);
